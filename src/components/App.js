@@ -7,11 +7,8 @@ const App = () => {
   return (
     <div>
     <label for="name" > Enter your name:</label>
-    <input type="text" id="name" ></input>
-    <button onChange={(e)=>setName(e.target.value)}></button>
-{if(name.length>0){
-  <p>{`Hello ${name}!`}</p>
-}
+    <input type="text" id="name" onChange={(e)=>setName(e.target.value)}></input>
+    {name.length>0?<p>{`Hello ${name}!`}</p>:""}
     </div>
   )
 }
